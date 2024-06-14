@@ -1,16 +1,21 @@
 let firstCard = 6
 let secondCard = 9
-let sum = firstCard + secondCard
+let sum = firstCard + secondCard + 4
+let hasBlackJack = false 
+let isAlive = true 
+let message =""
 
 if (sum < 21) {
-    console.log("do you want to draw a new card ?")
+    message = "do you want to draw a new card ?"
 }
-else if(sum == 21) {
-    console.log("Wohouu! you've got Blackjack!")
+else if(sum === 21) {
+    message="Wohouu! you've got Blackjack!"
+    let hasBlackJack = true 
 }
 
 else  {
     console.log("tou're out of the game!")
+    isAlive = false
 }
 
 //-----------------------------------------
@@ -31,3 +36,19 @@ if (age < 100) {
 if (sum <= 20 ){
     console.log("D o")
 }
+
+//------------------------------------------------------------------
+
+// key value pairs 
+
+let course = {
+    title: "learn CSS grid for free",
+    lessons: 16,
+    creator: "per garoui chaima",
+    lenght: 63,
+    isFree: true,
+    tags: ["html","css"]
+}
+
+console.log( course.creator)
+
