@@ -1,3 +1,5 @@
+let firstCard = 10
+let secondCard = 4 
 let card = []
 let sum = 0
 let hasBlackJack = false 
@@ -11,12 +13,29 @@ let playerEl = document.getElementById("player-el")
 console.log(playerEl)
 
 
+// function rollDice(){
+//     let randomNumber = Math.floor( Math.random() * 6 ) + 1
+//     return randomNumber
+// }
+
+// console.log(rollDice())
+
+
+//make this function return a random number between 1 and 13 
+function getRandomCard(){
+    return Math.floor( Math.random()+13) + 1
+}
+
+
+
+
 function startGame(){
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "do you want to draw a new card ?"
     }
+
     else if(sum === 21) {
         message="Wohouu! you've got Blackjack!"
         let hasBlackJack = true 
