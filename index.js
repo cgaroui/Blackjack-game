@@ -29,24 +29,32 @@ function startGame(){
     messageEl.textContent = message
 }
 
+
+function newCard() {
+    let card = 6
+    sum+= card
+    // to Push the card to the cards array
+    renderGame()    // renderGame() est appelée pour mettre à jour l'affichage du jeu.
+}
+
 //-----------------------------------------
 
 //check if the person is elegible dor a birthday card from the King! (100)
 
-let age = 100
+// let age = 100
 
-if (age < 100) {
-        console.log("Not elegible")
-}else if ( age === 100){
-    console.log("here is your birthday card from the King!")
-}else {
-    console.log("Not elegible! you have already gotten one ")
-}
+// if (age < 100) {
+//         console.log("Not elegible")
+// }else if ( age === 100){
+//     console.log("here is your birthday card from the King!")
+// }else {
+//     console.log("Not elegible! you have already gotten one ")
+// }
 
 
-if (sum <= 20 ){
-    console.log("D o")
-}
+// if (sum <= 20 ){
+//     console.log("D o")
+// }
 
 //------------------------------------------------------------------
 
