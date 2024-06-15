@@ -1,21 +1,32 @@
-let firstCard = 6
-let secondCard = 9
-let sum = firstCard + secondCard + 4
+let card = []
+let sum = 0
 let hasBlackJack = false 
-let isAlive = true 
+let isAlive = false  
 let message =""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
+let playerEl = document.getElementById("player-el")
 
-if (sum < 21) {
-    message = "do you want to draw a new card ?"
-}
-else if(sum === 21) {
-    message="Wohouu! you've got Blackjack!"
-    let hasBlackJack = true 
-}
+console.log(playerEl)
 
-else  {
-    console.log("tou're out of the game!")
-    isAlive = false
+
+function startGame(){
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
+    sumEl.textContent = "Sum: " + sum
+    if (sum <= 20) {
+        message = "do you want to draw a new card ?"
+    }
+    else if(sum === 21) {
+        message="Wohouu! you've got Blackjack!"
+        let hasBlackJack = true 
+    }
+
+    else  {
+        message = "You're out of the game!"
+        isAlive = false
+    }
+    messageEl.textContent = message
 }
 
 //-----------------------------------------
@@ -52,3 +63,9 @@ let course = {
 
 console.log( course.creator)
 
+//-------------------------------------------------------
+
+let player = {
+    name : "chaima",
+    chips : 200
+}
